@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/kasvrol/api_livraria_modulo04/issues"
   },
-  "homepage": "https://github.com/kasvrol/api_livraria_modulo04#readme"
+  "homepage": "https://github.com/kasvrol/api_livraria_modulo04#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
