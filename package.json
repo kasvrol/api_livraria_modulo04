@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/kasvrol/api_livraria_modulo04#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "nodemon": "^2.0.15",
+    "save-dev": "^0.0.1-security"
   }
 }
