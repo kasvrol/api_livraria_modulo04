@@ -5,4 +5,5 @@ module.exports = () =>{
     consign()
         .include('controllers')
         .into(app)
+    return app;
 }
