@@ -1,10 +1,11 @@
+// solicito o express, consign e o body-parser
 const express = require('express')
 const consign = require('consign')
-const bodyParser = require('body-parser')
+// exporto o express
 module.exports = () =>{
     const app = express()
-    app.use(bodyParser.urlencoded({extended: true}))
-    app.use(bodyParser.json())
+    // solicito o pacote express para solicitar dados do body
+    app.use(express.json());
     consign()
         .include('controllers')
         .into(app)
