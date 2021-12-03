@@ -16,7 +16,7 @@ const usuarios = (app) => {
       res.send('<h2>API rodando na rota GET</h2>')
     })
   
-    app.get('/usuarios', (req, res) => { 
+    app.get('/usuarios/all', (req, res) => { 
         modeloUsuarios.mostraUsuarios(req, res)
     })
   
