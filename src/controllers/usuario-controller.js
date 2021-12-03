@@ -9,7 +9,7 @@ module.exports = app => {
         next();
     })
 }
-const modeloUsuarios = require('../models/modelo_usuarios')
+const modeloUsuarios = require('../models/modelo_usuarios.js')
 //configuração das rotas de usuarios
 const usuarios = (app) => {
     app.get('/', (req, res) => {
