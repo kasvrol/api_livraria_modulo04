@@ -1,8 +1,12 @@
+const express = require('express')
+const cors = require('cors')
+
 module.exports = app => {
-    app.get('/', (req, res)=> res.send('servidor rodando na rota GET, tudo beleza'))
-    app.post('/', (req, res)=> {
-        console.log(req.body)
-        res.send('servidor rodando na rota POST, tudo beleza')})
+    app.use(cors());
+    app.use(express.json())
+    app.use((req, res, next) => {
+        next();
+    })
 }
 const modeloUsuarios = require('../models/modelo_usuarios')
 
