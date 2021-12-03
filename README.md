@@ -44,21 +44,27 @@ A API foi construídas com fins didáticos, como projeto final do quarto módulo
   }
   ```
   # Iniciando o projeto no seu PC
+   
+ <!--ts-->
+   * Abra o terminal de seu computador
+   * Clone o repositório:
+<!--ts-->
 
-   ## Abra o terminal de seu computador
-   ## Clone o repositório:
   ```bash
 git clone https://github.com/kasvrol/api_livraria_modulo04
 ```
-  ## Abra a pasta em seu editor de código.
-  ## Abra o terminal integrado da pasta no editor do código.
-  ## Instale o pacote do código:
-
+<!--ts-->
+   * Abra a pasta em seu editor de código.
+   * Abra o terminal integrado da pasta no editor do código.
+   * Instale o pacote do código:
+<!--ts-->
   
   ```bash
 npm install
 ```
- ## Instalação Necessária:
+<!--ts-->
+    * Inicie o  código:
+ <!--ts-->
   
   ```bash
 npm start
