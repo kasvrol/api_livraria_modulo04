@@ -64,7 +64,7 @@ npm install
 ```
 <!--ts-->
     * Inicie o  código:
- <!--ts-->
+<!--ts-->
   
   ```bash
 npm start
