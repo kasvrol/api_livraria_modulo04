@@ -50,6 +50,7 @@ A API foi construídas com fins didáticos, como projeto final do quarto módulo
      ```bash
         git clone https://github.com/kasvrol/api_livraria_modulo04
     ```
+    #
     <!--ts-->
     * Abra a pasta em seu editor de código.
     * Abra o terminal integrado da pasta no editor do código.
@@ -57,13 +58,14 @@ A API foi construídas com fins didáticos, como projeto final do quarto módulo
      ```bash
         npm install
     ```
+    #
     <!--ts-->
     * Inicie o código:
      ```bash
         npm start
     ```
 
-## Group 09:
+## Group 10:
 
 - [Ayala Priscila](https://github.com/priscilacerqueira21)
 - [Ana Karolina](https://github.com/kasvrol) 
