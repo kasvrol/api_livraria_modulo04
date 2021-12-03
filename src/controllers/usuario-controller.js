@@ -1,6 +1,7 @@
+//solicitação do express e do cors
 const express = require('express')
 const cors = require('cors')
-
+//exportação do cors e do express
 module.exports = app => {
     app.use(cors());
     app.use(express.json())
@@ -9,7 +10,7 @@ module.exports = app => {
     })
 }
 const modeloUsuarios = require('../models/modelo_usuarios')
-
+//configuração das rotas de usuarios
 const usuarios = (app) => {
     app.get('/', (req, res) => {
       res.send('<h2>API rodando na rota GET</h2>')
@@ -35,5 +36,5 @@ const usuarios = (app) => {
         modeloUsuarios.deletaUsuario(req, res)
     })
   }
-  
+  //exportação dos usuarios
   module.exports = usuarios
