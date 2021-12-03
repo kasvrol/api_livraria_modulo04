@@ -62,9 +62,7 @@ git clone https://github.com/kasvrol/api_livraria_modulo04
   ```bash
 npm install
 ```
-<!--ts-->
-    * Inicie o  código:
-<!--ts-->
+## Inicie o  código:
   
   ```bash
 npm start
