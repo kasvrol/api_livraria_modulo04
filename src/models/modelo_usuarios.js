@@ -1,5 +1,5 @@
 const usuariosDAO = require('../DAO/usuariosDAO.js')
-const database = require('../database/sqlite-db.js')
+const database = require('../database/sqlite3-db.js')
 
 class modeloUsuarios {
   static async mostraUsuarios(req, res) {

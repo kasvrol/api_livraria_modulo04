@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 3000
 const usuarioController = require('./src/controllers/usuario-controller.js')
 usuarioController(app)
 
-const usuarios = require('./src/database/usuarios.js')
+const usuarios = require('./src/database/criar-dados.js')
 app.listen(PORT, () => console.log('servidor rodando na porta 3000'))
 ///////////////////////////////////////////////////
 

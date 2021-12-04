@@ -7,7 +7,7 @@ module.exports = () =>{
     // solicito o pacote express para solicitar dados do body
     app.use(express.json());
     consign()
-        .include('controllers')
+        .include('src/controllers')
         .into(app)
     return app;
 }

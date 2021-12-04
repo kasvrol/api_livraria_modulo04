@@ -19,7 +19,7 @@ const usuario = `
 const usuarioInserido = `INSERT INTO USUARIO
         (id_usuario, cpf, primeiro_nome, sobrenome, email, senha, cep, endereco)
         VALUES
-        (1, '11111111111', 'Janio', 'Quadros', 'janioquadros@gmail.com', 'querosair', '1111-111', 'republica do brasil, 190')
+        (0, '00000000000', 'Janio', 'Quadros', 'janioquadros@gmail.com', 'querosair', '1111-111', 'republica do brasil, 190')
        
 `;
 
