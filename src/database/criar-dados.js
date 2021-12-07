@@ -16,11 +16,12 @@ const usuario = `
     )
 `;
 
-const usuarioInserido = `INSERT INTO USUARIO
-        (id_usuario, cpf, primeiro_nome, sobrenome, email, senha, cep, endereco)
+const usuarioInserido = `INSERT INTO USUARIO (id_usuario, cpf, primeiro_nome, sobrenome, email, senha, cep, endereco)
         VALUES
         (0, '00000000000', 'Janio', 'Quadros', 'janioquadros@gmail.com', 'querosair', '1111-111', 'republica do brasil, 190')
-       
+        (1, '00000000001', 'João', 'Quadros', 'joaoquadros@gmail.com', 'queroentrar', '1111-111', 'republica do brasil, 191')
+        (2, '00000000002', 'Juarez', 'Quadros', 'juarezquadros@gmail.com', 'queroficar', '1111-111', 'republica do brasil, 192')
+        (3, '00000000003', 'Jacinto', 'Quadros', 'jacintoquadros@gmail.com', 'naosei', '1111-111', 'republica do brasil, 193')       
 `;
 
 function criaTabelaUsuario() {
