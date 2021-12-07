@@ -4,16 +4,16 @@ const caminhoArq = path.resolve(__dirname, 'database.db')
 const db = new sqlite3.Database(caminhoArq);
 
 const usuario = `
-    CREATE TABLE IF NOT EXISTS "USUARIO" (
-        "id_usuario" INTEGER PRIMARY KEY AUTOINCREMENT,
-        "cpf" varchar(11) NOT NULL UNIQUE,
-        "primeiro_nome" varchar(255),
-        "sobrenome" varchar(255),
-        "email" varchar(255) NOT NULL UNIQUE,
-        "senha" varchar(6),
-        "cep" varchar(8),
-        "endereco" varchar(255)
-    )
+CREATE TABLE IF NOT EXISTS "USUARIO" (
+    "id_usuario" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "cpf" varchar(11) NOT NULL UNIQUE,
+    "primeiro_nome" varchar(255),
+    "sobrenome" varchar(255),
+    "email" varchar(255) NOT NULL UNIQUE,
+    "senha" varchar(6),
+    "cep" varchar(8),
+    "endereco" varchar(255)
+);
 `;
 
 const usuarioInserido = `INSERT INTO USUARIO (id_usuario, cpf, primeiro_nome, sobrenome, email, senha, cep, endereco)
@@ -25,17 +25,17 @@ const usuarioInserido = `INSERT INTO USUARIO (id_usuario, cpf, primeiro_nome, so
 `;
 
 function criaTabelaUsuario() {
-    db.run(usuario, (e) => {
-        if (e) {
-            console.log('Erro ao criar a tabela usuario', e);
+    db.run(usuario, (error) => {
+        if (error) {
+            console.log('Erro ao criar a tabela usuario', error);
         }
     });
 }
 
 function insereTabelaUsuario() {
-    db.run(usuarioInserido, (e) => {
-        if (e) {
-            console.log('Erro ao inserir os dados na tabela usuario', e);
+    db.run(usuarioInserido, (error) => {
+        if (error) {
+            console.log('Erro ao inserir os dados na tabela usuario', error);
         }
     });
 }
@@ -44,3 +44,6 @@ db.serialize(() => {
     criaTabelaUsuario();
     insereTabelaUsuario();
 })
+
+
+

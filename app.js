@@ -5,7 +5,7 @@ const app = customExpress()
 const PORT = process.env.PORT || 3000
 // solicitando o arquivo usuarios-controller.js
 const usuarioController = require('./src/controllers/usuario-controller.js')
-const db = require('./database/sqlite3-db')
+const db = require('./src/database/sqlite3-db')
 usuarioController(app, db)
 
 const usuarios = require('./src/database/criar-dados.js')
