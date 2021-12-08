@@ -35,9 +35,9 @@ class usuariosENovosUsuarios {
     }
   
   
-    adicionaUsuario(body, usuariosdb) {
+    criaUsuario(body, usuariosdb) {
       return new Promise((resolve, reject) => {
-        usuariosdb.run(`INSERT INTO USUARIO (id_usuario, cpf, primeiro_nome, sobrenome, email, senha, cep, endereco) VALUES (?, ?, ?, ?, ?, ?, ?)`, [body.id_usuario, body.cpf, body.primeiro_nome, body.sobrenome, body.email, body.senha, body.cep, body.endereco], (err, rows) => {
+        usuariosdb.run(`INSERT INTO USUARIO (id_usuario, cpf, primeiro_nome, sobrenome, email, senha, cep, endereco) VALUES (?, ?, ?, ?, ?, ?, ?, ?)`, [body.id_usuario, body.cpf, body.primeiro_nome, body.sobrenome, body.email, body.senha, body.cep, body.endereco], (err, body) => {
           if (err) {
             reject(({ "mensagem": err.message, "error": true }))
           } else {
@@ -55,7 +55,7 @@ class usuariosENovosUsuarios {
   
     atualUsuario(id, body, usuariosdb) {
       return new Promise((resolve, reject) => {
-        usuariosdb.run(`UPDATE USUARIO SET (id_usuario, cpf, primeiro_nome, sobrenome, email, senha, cep, endereco) = (?, ?, ?, ?, ?, ?, ? WHERE id_usuario = ?`, [body.id_usuario, body.cpf, body.primeiro_nome, body.sobrenome, body.email, body.senha, body.cep, body.endereco], (err, rows) => {
+        usuariosdb.run(`UPDATE USUARIO SET (id_usuario, cpf, primeiro_nome, sobrenome, email, senha, cep, endereco) = (?, ?, ?, ?, ?, ?, ?, ?)`, [body.id_usuario, body.cpf, body.primeiro_nome, body.sobrenome, body.email, body.senha, body.cep, body.endereco], (err, id) => {
           if (err) {
             reject(({ "mensagem": err.message, "error": true }))
           } else {
@@ -72,7 +72,7 @@ class usuariosENovosUsuarios {
   
     deleteUsuario(id, usuariosdb) {
       return new Promise((resolve, reject) => {
-        usuariosdb.run(`DELETE FROM USUARIO WHERE id_usuario = ?`, id, (err, rows) => {
+        usuariosdb.run(`DELETE FROM USUARIO WHERE id_usuario = ?`, id, (err, id) => {
           if (err) {
             reject(({ "mensagem": err.message, "error": true }))
           } else {

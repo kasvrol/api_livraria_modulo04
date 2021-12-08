@@ -11,7 +11,7 @@ class modeloUsuarios {
     }
   }
 
-  static async selecionaIDUsuarior(req, res) {
+  static async selecionaIDUsuario(req, res) {
     try {
       const id = req.params.id
       const pegaID = await usuariosDAO.selectID(id, database)
@@ -24,7 +24,7 @@ class modeloUsuarios {
   static async criaUsuario(req, res) {
     try {
       const body = req.body
-      const cria = await usuariosDAO.adicionaUsuario(body, database)
+      const cria = await usuariosDAO.criaUsuario(body, database)
       res.status(200).json(cria)
     } catch (err) {
       res.status(400).json(err)
