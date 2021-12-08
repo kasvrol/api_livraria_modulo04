@@ -21,7 +21,7 @@ class modeloUsuarios {
     }
   }
 
-  static async criaAutor(req, res) {
+  static async criaUsuario(req, res) {
     try {
       const body = req.body
       const cria = await usuariosDAO.adicionaUsuario(body, database)
@@ -31,7 +31,7 @@ class modeloUsuarios {
     }
   }
 
-  static async atualAutor(req, res) {
+  static async atualUsuario(req, res) {
     try {
       const id = req.params.id
       const body = req.body
@@ -42,7 +42,7 @@ class modeloUsuarios {
     }
   }
 
-  static async deletaAutor(req, res) {
+  static async deletaUsuario(req, res) {
     try {
       const id = req.params.id
       const delUsuario = await usuariosDAO.deleteUsuario(id, database)
