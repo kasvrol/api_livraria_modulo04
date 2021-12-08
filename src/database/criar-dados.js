@@ -5,11 +5,11 @@ const db = new sqlite3.Database(caminhoArq);
 
 const usuario = `
 CREATE TABLE IF NOT EXISTS "USUARIO" (
-    "id_usuario" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "id_usuario",
     "cpf" varchar(11),
     "primeiro_nome" varchar(255),
     "sobrenome" varchar(255),
-    "email" varchar(255) NOT NULL UNIQUE,
+    "email" varchar(255),
     "senha" varchar(6),
     "cep" varchar(8),
     "endereco" varchar(255)
