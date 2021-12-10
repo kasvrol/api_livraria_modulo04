@@ -3,46 +3,32 @@ const path = require('path');
 const caminhoArq = path.resolve(__dirname, 'database.db')
 const db = new sqlite3.Database(caminhoArq);
 
-const usuario = `
+const USUARIO = `
 CREATE TABLE IF NOT EXISTS "USUARIO" (
-    "id_usuario",
-    "cpf" varchar(11),
-    "primeiro_nome" varchar(255),
-    "sobrenome" varchar(255),
-    "email" varchar(255),
-    "senha" varchar(6),
-    "cep" varchar(8),
-    "endereco" varchar(255)
+    "id_usuario" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    "cpf" VARCHAR(11) UNIQUE NOT NULL,
+    "primeiro_nome" TEXT NOT NULL,
+    "sobrenome" TEXT NOT NULL,
+    "email" TEXT NOT NULL,
+    "senha" TEXT NOT NULL,
+    "cep" TEXT NOT NULL,
+    "endereco" TEXT NOT NULL
 )
 `;
 
-const usuarioInserido = `INSERT INTO USUARIO (id_usuario, cpf, primeiro_nome, sobrenome, email, senha, cep, endereco)
-        VALUES
-        (0, 00000000000, 'Janio', 'Quadros', 'janioquadros@gmail.com', 'querosair', '1111-111', 'republica do brasil, 190'),
-        (1, 00000000001, 'João', 'Quadros', 'joaoquadros@gmail.com', 'queroentrar', '1111-111', 'republica do brasil, 191'),
-        (2, 00000000002, 'Juarez', 'Quadros', 'juarezquadros@gmail.com', 'queroficar', '1111-111', 'republica do brasil, 192'),
-        (3, 00000000003, 'Jacinto', 'Quadros', 'jacintoquadros@gmail.com', 'naosei', '1111-111', 'republica do brasil, 193')       
-`;
 
 function criaTabelaUsuario() {
-    db.run(usuario, (error) => {
+    db.run(USUARIO, (error) => {
         if (error) {
             console.log('Erro ao criar a tabela usuario', error);
         }
     });
 }
 
-function insereTabelaUsuario() {
-    db.run(usuarioInserido, (error) => {
-        if (error) {
-            console.log('Erro ao inserir os dados na tabela usuario', error);
-        }
-    });
-}
 
 db.serialize(() => {
     criaTabelaUsuario();
-    insereTabelaUsuario();
+    
 })
 
 

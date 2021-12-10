@@ -37,7 +37,7 @@ class usuariosENovosUsuarios {
   
     criaUsuario(body, usuariosdb) {
       return new Promise((resolve, reject) => {
-        usuariosdb.run(`INSERT INTO USUARIO (id_usuario, cpf, primeiro_nome, sobrenome, email, senha, cep, endereco) VALUES (?, ?, ?, ?, ?, ?, ?, ?)`, [body.id_usuario, body.cpf, body.primeiro_nome, body.sobrenome, body.email, body.senha, body.cep, body.endereco], (err, body) => {
+        usuariosdb.run(`INSERT INTO USUARIO (cpf, primeiro_nome, sobrenome, email, senha, cep, endereco) VALUES (?, ?, ?, ?, ?, ?, ?)`, [body.cpf, body.primeiro_nome, body.sobrenome, body.email, body.senha, body.cep, body.endereco], (err, body) => {
           if (err) {
             reject(({ "mensagem": err.message, "error": true }))
           } else {
