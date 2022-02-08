@@ -8,12 +8,12 @@ A API foi construídas com fins didáticos, como projeto final do quarto módulo
 
 ## Ferramentas utilizadas:
 
-<!--ts-->
-   * SQLite
-   * Node.Js
-   * Express
-   * Cors
-   * Consign
+
+   - SQLite
+   - Node.Js
+   - Express
+   - Cors
+   - Consign
    
    
 ## Rotas da API:
@@ -42,29 +42,28 @@ A API foi construídas com fins didáticos, como projeto final do quarto módulo
 "devDependencies": {
     "nodemon": "^2.0.15"
   }
-  ```
+```
   # Iniciando o projeto no seu PC
    
- <!--ts-->
-   * Abra o terminal de seu computador
-   * Clone o repositório:
-<!--ts-->
 
-  ```bash
+   - Abra o terminal de seu computador
+   - Clone o repositório:
+
+```bash
 git clone https://github.com/kasvrol/api_livraria_modulo04
 ```
-<!--ts-->
-   * Abra a pasta em seu editor de código.
-   * Abra o terminal integrado da pasta no editor do código.
-   * Instale o pacote do código:
-<!--ts-->
+
+   - Abra a pasta em seu editor de código.
+   - Abra o terminal integrado da pasta no editor do código.
+   - Instale o pacote do código:
   
-  ```bash
+```bash
 npm install
 ```
-## Inicie o  código:
+
+ - Inicie o  código:
   
-  ```bash
+```bash
 npm start
 ```
 
